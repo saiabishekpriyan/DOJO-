@@ -1,0 +1,11 @@
+n=input()
+result=" "
+
+for char in n:
+    if 'a'<=char<='z':
+        result+=chr(ord(char)-32)
+    elif 'A'<=char<='Z':
+        result+=chr(ord(char)+32)
+    else:
+        result+=char
+print(result)
