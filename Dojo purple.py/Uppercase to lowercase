@@ -1,11 +1,18 @@
-n=input()
-result=" "
+n = input()
+result = " "
+
+
+uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+lowercase = "abcdefghijklmnopqrstuvwxyz"
 
 for char in n:
-    if 'a'<=char<='z':
-        result+=chr(ord(char)-32)
-    elif 'A'<=char<='Z':
-        result+=chr(ord(char)+32)
+    if char in lowercase:  
+        index = lowercase.index(char)  
+        result += uppercase[index] 
+    elif char in uppercase:  
+        index = uppercase.index(char)  
+        result += lowercase[index]  
     else:
-        result+=char
+        result += char  
+
 print(result)
