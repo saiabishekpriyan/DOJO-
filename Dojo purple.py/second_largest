@@ -1,8 +1,5 @@
 n=int(input())
-arr=[]
-
-for i in range(n):
-    arr.append(int(input()))
+arr=list(map(int,input().split()))
     
 max1=max2=float('-inf')
 
@@ -15,4 +12,3 @@ for num in arr:
         max2=num
         
 print(max2)
-    
