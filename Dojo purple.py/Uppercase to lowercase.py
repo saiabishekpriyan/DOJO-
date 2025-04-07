@@ -1,18 +1,12 @@
 n = input()
-result = " "
-
-
-uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-lowercase = "abcdefghijklmnopqrstuvwxyz"
+result = []
 
 for char in n:
-    if char in lowercase:  
-        index = lowercase.index(char)  
-        result += uppercase[index] 
-    elif char in uppercase:  
-        index = uppercase.index(char)  
-        result += lowercase[index]  
+    if 'a' <= char <= 'z':
+        result.append(chr(ord(char) - 32)) 
+    elif 'A' <= char <= 'Z':
+        result.append(chr(ord(char) + 32))  
     else:
-        result += char  
+        result.append(char) 
 
-print(result)
+print("".join(result))
